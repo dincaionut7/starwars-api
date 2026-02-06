@@ -13,7 +13,6 @@ import org.springframework.stereotype.Service;
 public class AuthService {
 
   private record Session(String username, String refreshToken) {}
-  ;
 
   private final ConcurrentHashMap<String, Session> sessionsByAccessToken =
       new ConcurrentHashMap<>();
