@@ -4,8 +4,7 @@ import com.watech.starwars.exception.BadRequestException;
 import com.watech.starwars.exception.UnauthorizedException;
 import com.watech.starwars.model.auth.LoginResponse;
 import com.watech.starwars.model.auth.RefreshResponse;
-import java.security.SecureRandom;
-import java.util.Base64;
+import com.watech.starwars.util.AuthUtil;
 import java.util.concurrent.ConcurrentHashMap;
 import org.springframework.stereotype.Service;
 
@@ -19,16 +18,14 @@ public class AuthService {
   private final ConcurrentHashMap<String, String> accessTokensByRefreshToken =
       new ConcurrentHashMap<>();
 
-  private final SecureRandom secureRandom = new SecureRandom();
-
   public LoginResponse login(String username, String password) {
     if (username == null || username.isBlank() || password == null || password.isBlank())
       throw new BadRequestException("Username and password required");
 
     // accept any
 
-    String accessToken = generateToken();
-    String refreshToken = generateToken();
+    String accessToken = AuthUtil.generateToken();
+    String refreshToken = AuthUtil.generateToken();
 
     sessionsByAccessToken.put(accessToken, new Session(username, refreshToken));
     accessTokensByRefreshToken.put(refreshToken, accessToken);
@@ -46,7 +43,7 @@ public class AuthService {
     Session oldSession = sessionsByAccessToken.remove(oldAccessToken);
     if (oldSession == null) throw new UnauthorizedException("Access Token expired");
 
-    String newAccessToken = generateToken();
+    String newAccessToken = AuthUtil.generateToken();
 
     sessionsByAccessToken.put(newAccessToken, new Session(oldSession.username(), refreshToken));
     accessTokensByRefreshToken.put(refreshToken, newAccessToken);
@@ -63,12 +60,5 @@ public class AuthService {
 
     Session session = sessionsByAccessToken.remove(accessToken);
     if (session != null) accessTokensByRefreshToken.remove(session.refreshToken());
-  }
-
-  private String generateToken() {
-    byte[] bytes = new byte[32];
-    secureRandom.nextBytes(bytes);
-
-    return Base64.getUrlEncoder().withoutPadding().encodeToString(bytes);
   }
 }
