@@ -1,0 +1,395 @@
+2026-02-06T00:54:44.147+02:00  INFO 15292 --- [starwars-api] [main] c.w.starwars.StarwarsApiApplication      : Starting StarwarsApiApplication using Java 21.0.10 with PID 15292 (C:\Users\lyly\Documents\starwars-api\starwars-api\target\classes started by lyly in C:\Users\lyly\Documents\starwars-api\starwars-api)
+2026-02-06T00:54:44.155+02:00  INFO 15292 --- [starwars-api] [main] c.w.starwars.StarwarsApiApplication      : No active profile set, falling back to 1 default profile: "default"
+2026-02-06T00:54:45.391+02:00  INFO 15292 --- [starwars-api] [main] o.s.boot.reactor.netty.NettyWebServer    : Netty started on port 8080 (http)
+2026-02-06T00:54:45.550+02:00  INFO 15292 --- [starwars-api] [main] c.w.starwars.StarwarsApiApplication      : Started StarwarsApiApplication in 1.651 seconds (process running for 2.149)
+2026-02-06T00:54:57.511+02:00  INFO 15292 --- [starwars-api] [SpringApplicationShutdownHook] o.s.boot.reactor.netty.GracefulShutdown  : Commencing graceful shutdown. Waiting for active requests to complete
+2026-02-06T00:54:57.514+02:00  INFO 15292 --- [starwars-api] [netty-shutdown] o.s.boot.reactor.netty.GracefulShutdown  : Graceful shutdown complete
+2026-02-06T02:10:17.795+02:00  INFO 15240 --- [starwars-api] [main] c.w.s.controller.PeopleControllerTest    : Starting PeopleControllerTest using Java 21.0.10 with PID 15240 (started by lyly in C:\Users\lyly\Documents\starwars-api\starwars-api)
+2026-02-06T02:10:17.798+02:00  INFO 15240 --- [starwars-api] [main] c.w.s.controller.PeopleControllerTest    : No active profile set, falling back to 1 default profile: "default"
+2026-02-06T02:10:19.435+02:00  WARN 15240 --- [starwars-api] [main] c.r.GenericReactiveWebApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'authFilter' defined in file [C:\Users\lyly\Documents\starwars-api\starwars-api\target\classes\com\watech\starwars\filter\AuthFilter.class]: Unsatisfied dependency expressed through constructor parameter 0: No qualifying bean of type 'com.watech.starwars.service.AuthService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
+2026-02-06T02:10:19.454+02:00  INFO 15240 --- [starwars-api] [main] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2026-02-06T02:10:19.490+02:00 ERROR 15240 --- [starwars-api] [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Parameter 0 of constructor in com.watech.starwars.filter.AuthFilter required a bean of type 'com.watech.starwars.service.AuthService' that could not be found.
+
+
+Action:
+
+Consider defining a bean of type 'com.watech.starwars.service.AuthService' in your configuration.
+
+2026-02-06T02:10:19.495+02:00  WARN 15240 --- [starwars-api] [main] o.s.test.context.TestContextManager      : Caught exception while allowing TestExecutionListener [org.springframework.test.context.bean.override.BeanOverrideTestExecutionListener] to prepare test instance [com.watech.starwars.controller.PeopleControllerTest@132e3594]
+
+java.lang.IllegalStateException: Failed to load ApplicationContext for [ReactiveWebMergedContextConfiguration@130cfc47 testClass = com.watech.starwars.controller.PeopleControllerTest, locations = [], classes = [com.watech.starwars.StarwarsApiApplication], contextInitializerClasses = [], activeProfiles = [], propertySourceDescriptors = [], propertySourceProperties = ["org.springframework.boot.webflux.test.autoconfigure.WebFluxTestContextBootstrapper=true"], contextCustomizers = [org.springframework.boot.web.server.context.SpringBootTestRandomPortContextCustomizer@2cf92cc7, [ImportsContextCustomizer@2b6fb197 key = [org.springframework.boot.webflux.autoconfigure.error.ErrorWebFluxAutoConfiguration, org.springframework.boot.webtestclient.autoconfigure.WebTestClientAutoConfiguration, org.springframework.boot.jackson.autoconfigure.JacksonAutoConfiguration, org.springframework.boot.autoconfigure.context.MessageSourceAutoConfiguration, org.springframework.boot.webflux.autoconfigure.WebFluxAutoConfiguration, org.springframework.boot.http.codec.autoconfigure.CodecsAutoConfiguration]], org.springframework.boot.test.context.PropertyMappingContextCustomizer@ec54a5c9, org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@7876d598, org.springframework.boot.test.context.filter.annotation.TypeExcludeFiltersContextCustomizer@88ca9809, org.springframework.boot.test.http.client.DisableReactorResourceFactoryGlobalResourcesContextCustomizerFactory$DisableReactorResourceFactoryGlobalResourcesContextCustomizerCustomizer@523424b5, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@791cbf87, org.springframework.boot.test.autoconfigure.OnFailureConditionReportContextCustomizerFactory$OnFailureConditionReportContextCustomizer@2b52c0d6, org.springframework.boot.test.autoconfigure.OverrideAutoConfigurationContextCustomizerFactory$DisableAutoConfigurationContextCustomizer@7de0c6ae, org.springframework.test.context.bean.override.BeanOverrideContextCustomizer@9bac40b4, org.springframework.test.context.support.DynamicPropertiesContextCustomizer@0, org.springframework.boot.test.context.SpringBootTestAnnotation@ed212c87], contextLoader = org.springframework.boot.test.context.SpringBootContextLoader, parent = null]
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.lambda$loadContext$0(DefaultCacheAwareContextLoaderDelegate.java:195) ~[spring-test-7.0.3.jar:7.0.3]
+	at org.springframework.test.context.cache.DefaultContextCache.put(DefaultContextCache.java:214) ~[spring-test-7.0.3.jar:7.0.3]
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:160) ~[spring-test-7.0.3.jar:7.0.3]
+	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:128) ~[spring-test-7.0.3.jar:7.0.3]
+	at org.springframework.test.context.bean.override.BeanOverrideTestExecutionListener.injectFields(BeanOverrideTestExecutionListener.java:107) ~[spring-test-7.0.3.jar:7.0.3]
+	at org.springframework.test.context.bean.override.BeanOverrideTestExecutionListener.prepareTestInstance(BeanOverrideTestExecutionListener.java:70) ~[spring-test-7.0.3.jar:7.0.3]
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:260) ~[spring-test-7.0.3.jar:7.0.3]
+	at org.springframework.test.context.junit.jupiter.SpringExtension.postProcessTestInstance(SpringExtension.java:205) ~[spring-test-7.0.3.jar:7.0.3]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$invokeTestInstancePostProcessors$1(ClassBasedTestDescriptor.java:423) ~[junit-jupiter-engine-6.0.2.jar:6.0.2]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.executeAndMaskThrowable(ClassBasedTestDescriptor.java:428) ~[junit-jupiter-engine-6.0.2.jar:6.0.2]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$invokeTestInstancePostProcessors$0(ClassBasedTestDescriptor.java:422) ~[junit-jupiter-engine-6.0.2.jar:6.0.2]
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.accept(ForEachOps.java:184) ~[na:na]
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197) ~[na:na]
+	at java.base/java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:179) ~[na:na]
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197) ~[na:na]
+	at java.base/java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1708) ~[na:na]
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:509) ~[na:na]
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499) ~[na:na]
+	at java.base/java.util.stream.ForEachOps$ForEachOp.evaluateSequential(ForEachOps.java:151) ~[na:na]
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.evaluateSequential(ForEachOps.java:174) ~[na:na]
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234) ~[na:na]
+	at java.base/java.util.stream.ReferencePipeline.forEach(ReferencePipeline.java:596) ~[na:na]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.invokeTestInstancePostProcessors(ClassBasedTestDescriptor.java:422) ~[junit-jupiter-engine-6.0.2.jar:6.0.2]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$instantiateAndPostProcessTestInstance$0(ClassBasedTestDescriptor.java:334) ~[junit-jupiter-engine-6.0.2.jar:6.0.2]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:74) ~[junit-platform-engine-6.0.2.jar:6.0.2]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.instantiateAndPostProcessTestInstance(ClassBasedTestDescriptor.java:333) ~[junit-jupiter-engine-6.0.2.jar:6.0.2]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$testInstancesProvider$1(ClassBasedTestDescriptor.java:322) ~[junit-jupiter-engine-6.0.2.jar:6.0.2]
+	at java.base/java.util.Optional.orElseGet(Optional.java:364) ~[na:na]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$testInstancesProvider$0(ClassBasedTestDescriptor.java:321) ~[junit-jupiter-engine-6.0.2.jar:6.0.2]
+	at org.junit.jupiter.engine.execution.TestInstancesProvider.getTestInstances(TestInstancesProvider.java:27) ~[junit-jupiter-engine-6.0.2.jar:6.0.2]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$prepare$0(TestMethodTestDescriptor.java:127) ~[junit-jupiter-engine-6.0.2.jar:6.0.2]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:74) ~[junit-platform-engine-6.0.2.jar:6.0.2]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.prepare(TestMethodTestDescriptor.java:126) ~[junit-jupiter-engine-6.0.2.jar:6.0.2]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.prepare(TestMethodTestDescriptor.java:70) ~[junit-jupiter-engine-6.0.2.jar:6.0.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$prepare$0(NodeTestTask.java:144) ~[junit-platform-engine-6.0.2.jar:6.0.2]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:74) ~[junit-platform-engine-6.0.2.jar:6.0.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.prepare(NodeTestTask.java:144) ~[junit-platform-engine-6.0.2.jar:6.0.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:110) ~[junit-platform-engine-6.0.2.jar:6.0.2]
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596) ~[na:na]
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:42) ~[junit-platform-engine-6.0.2.jar:6.0.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$2(NodeTestTask.java:180) ~[junit-platform-engine-6.0.2.jar:6.0.2]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:74) ~[junit-platform-engine-6.0.2.jar:6.0.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$1(NodeTestTask.java:166) ~[junit-platform-engine-6.0.2.jar:6.0.2]
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:138) ~[junit-platform-engine-6.0.2.jar:6.0.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$0(NodeTestTask.java:164) ~[junit-platform-engine-6.0.2.jar:6.0.2]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:74) ~[junit-platform-engine-6.0.2.jar:6.0.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:163) ~[junit-platform-engine-6.0.2.jar:6.0.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:116) ~[junit-platform-engine-6.0.2.jar:6.0.2]
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596) ~[na:na]
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:42) ~[junit-platform-engine-6.0.2.jar:6.0.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$2(NodeTestTask.java:180) ~[junit-platform-engine-6.0.2.jar:6.0.2]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:74) ~[junit-platform-engine-6.0.2.jar:6.0.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$1(NodeTestTask.java:166) ~[junit-platform-engine-6.0.2.jar:6.0.2]
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:138) ~[junit-platform-engine-6.0.2.jar:6.0.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$0(NodeTestTask.java:164) ~[junit-platform-engine-6.0.2.jar:6.0.2]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:74) ~[junit-platform-engine-6.0.2.jar:6.0.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:163) ~[junit-platform-engine-6.0.2.jar:6.0.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:116) ~[junit-platform-engine-6.0.2.jar:6.0.2]
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:36) ~[junit-platform-engine-6.0.2.jar:6.0.2]
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:52) ~[junit-platform-engine-6.0.2.jar:6.0.2]
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:58) ~[junit-platform-engine-6.0.2.jar:6.0.2]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.executeEngine(EngineExecutionOrchestrator.java:246) ~[junit-platform-launcher-6.0.2.jar:6.0.2]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.failOrExecuteEngine(EngineExecutionOrchestrator.java:218) ~[junit-platform-launcher-6.0.2.jar:6.0.2]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:179) ~[junit-platform-launcher-6.0.2.jar:6.0.2]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:108) ~[junit-platform-launcher-6.0.2.jar:6.0.2]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.lambda$execute$0(EngineExecutionOrchestrator.java:66) ~[junit-platform-launcher-6.0.2.jar:6.0.2]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.withInterceptedStreams(EngineExecutionOrchestrator.java:157) ~[junit-platform-launcher-6.0.2.jar:6.0.2]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:65) ~[junit-platform-launcher-6.0.2.jar:6.0.2]
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:125) ~[junit-platform-launcher-6.0.2.jar:6.0.2]
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:114) ~[junit-platform-launcher-6.0.2.jar:6.0.2]
+	at org.junit.platform.launcher.core.DelegatingLauncher.execute(DelegatingLauncher.java:58) ~[junit-platform-launcher-6.0.2.jar:6.0.2]
+	at org.junit.platform.launcher.core.InterceptingLauncher.lambda$execute$2(InterceptingLauncher.java:57) ~[junit-platform-launcher-6.0.2.jar:6.0.2]
+	at org.junit.platform.launcher.core.ClasspathAlignmentCheckingLauncherInterceptor.intercept(ClasspathAlignmentCheckingLauncherInterceptor.java:25) ~[junit-platform-launcher-6.0.2.jar:6.0.2]
+	at org.junit.platform.launcher.core.InterceptingLauncher.execute(InterceptingLauncher.java:56) ~[junit-platform-launcher-6.0.2.jar:6.0.2]
+	at org.junit.platform.launcher.core.DelegatingLauncher.execute(DelegatingLauncher.java:58) ~[junit-platform-launcher-6.0.2.jar:6.0.2]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+	at org.apache.maven.surefire.api.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:125) ~[surefire-api-3.5.4.jar:3.5.4]
+	at org.apache.maven.surefire.junitplatform.LauncherAdapter.executeWithCancellationToken(LauncherAdapter.java:68) ~[surefire-junit-platform-3.5.4.jar:3.5.4]
+	at org.apache.maven.surefire.junitplatform.LauncherAdapter.execute(LauncherAdapter.java:54) ~[surefire-junit-platform-3.5.4.jar:3.5.4]
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.execute(JUnitPlatformProvider.java:203) ~[surefire-junit-platform-3.5.4.jar:3.5.4]
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invokeAllTests(JUnitPlatformProvider.java:168) ~[surefire-junit-platform-3.5.4.jar:3.5.4]
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invoke(JUnitPlatformProvider.java:136) ~[surefire-junit-platform-3.5.4.jar:3.5.4]
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385) ~[surefire-booter-3.5.4.jar:3.5.4]
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162) ~[surefire-booter-3.5.4.jar:3.5.4]
+	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507) ~[surefire-booter-3.5.4.jar:3.5.4]
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495) ~[surefire-booter-3.5.4.jar:3.5.4]
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'authFilter' defined in file [C:\Users\lyly\Documents\starwars-api\starwars-api\target\classes\com\watech\starwars\filter\AuthFilter.class]: Unsatisfied dependency expressed through constructor parameter 0: No qualifying bean of type 'com.watech.starwars.service.AuthService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:804) ~[spring-beans-7.0.3.jar:7.0.3]
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:240) ~[spring-beans-7.0.3.jar:7.0.3]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1382) ~[spring-beans-7.0.3.jar:7.0.3]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1221) ~[spring-beans-7.0.3.jar:7.0.3]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:565) ~[spring-beans-7.0.3.jar:7.0.3]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:525) ~[spring-beans-7.0.3.jar:7.0.3]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:333) ~[spring-beans-7.0.3.jar:7.0.3]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:371) ~[spring-beans-7.0.3.jar:7.0.3]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:331) ~[spring-beans-7.0.3.jar:7.0.3]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:196) ~[spring-beans-7.0.3.jar:7.0.3]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.instantiateSingleton(DefaultListableBeanFactory.java:1218) ~[spring-beans-7.0.3.jar:7.0.3]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingleton(DefaultListableBeanFactory.java:1184) ~[spring-beans-7.0.3.jar:7.0.3]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:1121) ~[spring-beans-7.0.3.jar:7.0.3]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:993) ~[spring-context-7.0.3.jar:7.0.3]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:620) ~[spring-context-7.0.3.jar:7.0.3]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:756) ~[spring-boot-4.0.2.jar:4.0.2]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:445) ~[spring-boot-4.0.2.jar:4.0.2]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:321) ~[spring-boot-4.0.2.jar:4.0.2]
+	at org.springframework.boot.test.context.SpringBootContextLoader.lambda$loadContext$2(SpringBootContextLoader.java:156) ~[spring-boot-test-4.0.2.jar:4.0.2]
+	at org.springframework.util.function.ThrowingSupplier.get(ThrowingSupplier.java:58) ~[spring-core-7.0.3.jar:7.0.3]
+	at org.springframework.util.function.ThrowingSupplier.get(ThrowingSupplier.java:46) ~[spring-core-7.0.3.jar:7.0.3]
+	at org.springframework.boot.SpringApplication.withHook(SpringApplication.java:1465) ~[spring-boot-4.0.2.jar:4.0.2]
+	at org.springframework.boot.test.context.SpringBootContextLoader$ContextLoaderHook.run(SpringBootContextLoader.java:605) ~[spring-boot-test-4.0.2.jar:4.0.2]
+	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:156) ~[spring-boot-test-4.0.2.jar:4.0.2]
+	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:115) ~[spring-boot-test-4.0.2.jar:4.0.2]
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:247) ~[spring-test-7.0.3.jar:7.0.3]
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.lambda$loadContext$0(DefaultCacheAwareContextLoaderDelegate.java:167) ~[spring-test-7.0.3.jar:7.0.3]
+	... 86 common frames omitted
+Caused by: org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.watech.starwars.service.AuthService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.raiseNoMatchingBeanFound(DefaultListableBeanFactory.java:2297) ~[spring-beans-7.0.3.jar:7.0.3]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1725) ~[spring-beans-7.0.3.jar:7.0.3]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1651) ~[spring-beans-7.0.3.jar:7.0.3]
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:912) ~[spring-beans-7.0.3.jar:7.0.3]
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:791) ~[spring-beans-7.0.3.jar:7.0.3]
+	... 112 common frames omitted
+
+2026-02-06T02:20:58.261+02:00  INFO 29248 --- [starwars-api] [main] c.w.s.controller.PeopleControllerTest    : Starting PeopleControllerTest using Java 21.0.10 with PID 29248 (started by lyly in C:\Users\lyly\Documents\starwars-api\starwars-api)
+2026-02-06T02:20:58.263+02:00  INFO 29248 --- [starwars-api] [main] c.w.s.controller.PeopleControllerTest    : No active profile set, falling back to 1 default profile: "default"
+2026-02-06T02:21:00.524+02:00  INFO 29248 --- [starwars-api] [main] c.w.s.controller.PeopleControllerTest    : Started PeopleControllerTest in 2.648 seconds (process running for 4.16)
+2026-02-06T02:24:04.138+02:00  INFO 31048 --- [starwars-api] [main] c.w.s.controller.PeopleControllerTest    : Starting PeopleControllerTest using Java 21.0.10 with PID 31048 (started by lyly in C:\Users\lyly\Documents\starwars-api\starwars-api)
+2026-02-06T02:24:04.142+02:00  INFO 31048 --- [starwars-api] [main] c.w.s.controller.PeopleControllerTest    : No active profile set, falling back to 1 default profile: "default"
+2026-02-06T02:24:06.127+02:00  INFO 31048 --- [starwars-api] [main] c.w.s.controller.PeopleControllerTest    : Started PeopleControllerTest in 2.505 seconds (process running for 4.089)
+2026-02-06T03:01:56.353+02:00  INFO 10988 --- [starwars-api] [main] c.w.s.c.FavouriteControllerTest          : Starting FavouriteControllerTest using Java 21.0.10 with PID 10988 (started by lyly in C:\Users\lyly\Documents\starwars-api\starwars-api)
+2026-02-06T03:01:56.355+02:00  INFO 10988 --- [starwars-api] [main] c.w.s.c.FavouriteControllerTest          : No active profile set, falling back to 1 default profile: "default"
+2026-02-06T03:01:58.223+02:00  INFO 10988 --- [starwars-api] [main] c.w.s.c.FavouriteControllerTest          : Started FavouriteControllerTest in 2.369 seconds (process running for 3.597)
+2026-02-06T03:10:57.075+02:00  INFO 3436 --- [starwars-api] [main] c.w.starwars.AuthFlowIntegrationTest     : Starting AuthFlowIntegrationTest using Java 21.0.10 with PID 3436 (started by lyly in C:\Users\lyly\Documents\starwars-api\starwars-api)
+2026-02-06T03:10:57.082+02:00  INFO 3436 --- [starwars-api] [main] c.w.starwars.AuthFlowIntegrationTest     : No active profile set, falling back to 1 default profile: "default"
+2026-02-06T03:10:58.853+02:00  INFO 3436 --- [starwars-api] [main] o.s.boot.reactor.netty.NettyWebServer    : Netty started on port 58586 (http)
+2026-02-06T03:10:58.855+02:00  INFO 3436 --- [starwars-api] [main] c.w.starwars.AuthFlowIntegrationTest     : Started AuthFlowIntegrationTest in 2.354 seconds (process running for 3.785)
+2026-02-06T03:11:00.289+02:00 ERROR 3436 --- [starwars-api] [main] o.s.t.w.reactive.server.ExchangeResult   : Request details for assertion failure:
+
+> GET http://localhost:58586/favourites
+> accept-encoding: [gzip]
+> user-agent: [ReactorNetty/1.3.2]
+> host: [localhost:58586]
+> accept: [*/*]
+> WebTestClient-Request-Id: [5]
+> Authorization: [Bearer IyGLrErl0iigTK7xgMn_T6M5kBRy1vyRGcjEywyAZj8]
+> Refresh-Token: [EdRJoDfmjPmUUmDCqYNjaiRmFv-0IZ5Sl0PLKJsn3us]
+
+No content
+
+< 401 UNAUTHORIZED Unauthorized
+< content-length: [0]
+
+0 bytes of content (unknown content-type).
+
+2026-02-06T03:11:00.391+02:00  INFO 3436 --- [starwars-api] [SpringApplicationShutdownHook] o.s.boot.reactor.netty.GracefulShutdown  : Commencing graceful shutdown. Waiting for active requests to complete
+2026-02-06T03:11:00.395+02:00  INFO 3436 --- [starwars-api] [netty-shutdown] o.s.boot.reactor.netty.GracefulShutdown  : Graceful shutdown complete
+2026-02-06T03:28:32.568+02:00  INFO 21652 --- [starwars-api] [main] c.w.starwars.AuthFlowIntegrationTest     : Starting AuthFlowIntegrationTest using Java 21.0.10 with PID 21652 (started by lyly in C:\Users\lyly\Documents\starwars-api\starwars-api)
+2026-02-06T03:28:32.570+02:00  INFO 21652 --- [starwars-api] [main] c.w.starwars.AuthFlowIntegrationTest     : No active profile set, falling back to 1 default profile: "default"
+2026-02-06T03:28:34.315+02:00  INFO 21652 --- [starwars-api] [main] o.s.boot.reactor.netty.NettyWebServer    : Netty started on port 61180 (http)
+2026-02-06T03:28:34.322+02:00  INFO 21652 --- [starwars-api] [main] c.w.starwars.AuthFlowIntegrationTest     : Started AuthFlowIntegrationTest in 2.115 seconds (process running for 3.609)
+2026-02-06T03:28:35.523+02:00 ERROR 21652 --- [starwars-api] [main] o.s.t.w.reactive.server.ExchangeResult   : Request details for assertion failure:
+
+> GET http://localhost:61180/favourites
+> accept-encoding: [gzip]
+> user-agent: [ReactorNetty/1.3.2]
+> host: [localhost:61180]
+> accept: [*/*]
+> WebTestClient-Request-Id: [4]
+> Authorization: [Bearer IaE74Yex-AuclLbC0GSGy9R7mw__YOIhe58pl9dTZ8E]
+> Refresh-Token: [kGntw7ZUbhO1E2RLcqsK7SkDX442XpZKJnuN0G58ei4]
+
+No content
+
+< 200 OK OK
+< Content-Type: [application/json]
+< Content-Length: [24]
+
+["BB-8","R2-D2","C-3PO"]
+
+2026-02-06T03:28:35.600+02:00  INFO 21652 --- [starwars-api] [SpringApplicationShutdownHook] o.s.boot.reactor.netty.GracefulShutdown  : Commencing graceful shutdown. Waiting for active requests to complete
+2026-02-06T03:28:35.603+02:00  INFO 21652 --- [starwars-api] [netty-shutdown] o.s.boot.reactor.netty.GracefulShutdown  : Graceful shutdown complete
+2026-02-06T03:29:45.763+02:00  INFO 19656 --- [starwars-api] [main] c.w.starwars.AuthFlowIntegrationTest     : Starting AuthFlowIntegrationTest using Java 21.0.10 with PID 19656 (started by lyly in C:\Users\lyly\Documents\starwars-api\starwars-api)
+2026-02-06T03:29:45.766+02:00  INFO 19656 --- [starwars-api] [main] c.w.starwars.AuthFlowIntegrationTest     : No active profile set, falling back to 1 default profile: "default"
+2026-02-06T03:29:47.229+02:00  INFO 19656 --- [starwars-api] [main] o.s.boot.reactor.netty.NettyWebServer    : Netty started on port 61511 (http)
+2026-02-06T03:29:47.234+02:00  INFO 19656 --- [starwars-api] [main] c.w.starwars.AuthFlowIntegrationTest     : Started AuthFlowIntegrationTest in 1.764 seconds (process running for 2.918)
+2026-02-06T03:29:48.418+02:00  INFO 19656 --- [starwars-api] [SpringApplicationShutdownHook] o.s.boot.reactor.netty.GracefulShutdown  : Commencing graceful shutdown. Waiting for active requests to complete
+2026-02-06T03:29:48.423+02:00  INFO 19656 --- [starwars-api] [netty-shutdown] o.s.boot.reactor.netty.GracefulShutdown  : Graceful shutdown complete
+2026-02-06T03:44:48.521+02:00  INFO 21308 --- [starwars-api] [main] c.w.starwars.AuthFlowIntegrationTest     : Starting AuthFlowIntegrationTest using Java 21.0.10 with PID 21308 (started by lyly in C:\Users\lyly\Documents\starwars-api\starwars-api)
+2026-02-06T03:44:48.523+02:00  INFO 21308 --- [starwars-api] [main] c.w.starwars.AuthFlowIntegrationTest     : No active profile set, falling back to 1 default profile: "default"
+2026-02-06T03:44:50.105+02:00  INFO 21308 --- [starwars-api] [main] o.s.boot.reactor.netty.NettyWebServer    : Netty started on port 63309 (http)
+2026-02-06T03:44:50.113+02:00  INFO 21308 --- [starwars-api] [main] c.w.starwars.AuthFlowIntegrationTest     : Started AuthFlowIntegrationTest in 1.887 seconds (process running for 3.074)
+2026-02-06T03:44:51.716+02:00  INFO 21308 --- [starwars-api] [main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.watech.starwars.controller.FavouriteControllerSliceTest]: FavouriteControllerSliceTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-02-06T03:44:51.769+02:00  INFO 21308 --- [starwars-api] [main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.watech.starwars.StarwarsApiApplication for test class com.watech.starwars.controller.FavouriteControllerSliceTest
+2026-02-06T03:44:51.816+02:00  INFO 21308 --- [starwars-api] [main] c.w.s.c.FavouriteControllerSliceTest     : Starting FavouriteControllerSliceTest using Java 21.0.10 with PID 21308 (started by lyly in C:\Users\lyly\Documents\starwars-api\starwars-api)
+2026-02-06T03:44:51.817+02:00  INFO 21308 --- [starwars-api] [main] c.w.s.c.FavouriteControllerSliceTest     : No active profile set, falling back to 1 default profile: "default"
+2026-02-06T03:44:52.227+02:00  INFO 21308 --- [starwars-api] [main] c.w.s.c.FavouriteControllerSliceTest     : Started FavouriteControllerSliceTest in 0.447 seconds (process running for 5.187)
+2026-02-06T03:44:52.472+02:00  INFO 21308 --- [starwars-api] [SpringApplicationShutdownHook] o.s.boot.reactor.netty.GracefulShutdown  : Commencing graceful shutdown. Waiting for active requests to complete
+2026-02-06T03:44:52.477+02:00  INFO 21308 --- [starwars-api] [netty-shutdown] o.s.boot.reactor.netty.GracefulShutdown  : Graceful shutdown complete
+2026-02-06T04:12:27.880+02:00  INFO 29336 --- [starwars-api] [main] c.w.starwars.AuthFlowIntegrationTest     : Starting AuthFlowIntegrationTest using Java 21.0.10 with PID 29336 (started by lyly in C:\Users\lyly\Documents\starwars-api\starwars-api)
+2026-02-06T04:12:27.882+02:00  INFO 29336 --- [starwars-api] [main] c.w.starwars.AuthFlowIntegrationTest     : No active profile set, falling back to 1 default profile: "default"
+2026-02-06T04:12:29.455+02:00  INFO 29336 --- [starwars-api] [main] o.s.boot.reactor.netty.NettyWebServer    : Netty started on port 50513 (http)
+2026-02-06T04:12:29.461+02:00  INFO 29336 --- [starwars-api] [main] c.w.starwars.AuthFlowIntegrationTest     : Started AuthFlowIntegrationTest in 2.025 seconds (process running for 3.224)
+2026-02-06T04:12:30.440+02:00  INFO 29336 --- [starwars-api] [webflux-http-nio-2] c.w.s.filter.RequestLoggingFilter        : POST http://localhost:50513/auth/login -> 200 (84ms)
+2026-02-06T04:12:30.482+02:00  INFO 29336 --- [starwars-api] [webflux-http-nio-2] c.w.s.filter.RequestLoggingFilter        : GET http://localhost:50513/favourites -> 200 (8ms)
+2026-02-06T04:12:30.500+02:00  INFO 29336 --- [starwars-api] [webflux-http-nio-2] c.w.s.filter.RequestLoggingFilter        : GET http://localhost:50513/favourites -> 200 (2ms)
+2026-02-06T04:12:30.507+02:00  INFO 29336 --- [starwars-api] [webflux-http-nio-2] c.w.s.filter.RequestLoggingFilter        : GET http://localhost:50513/favourites -> 200 (0ms)
+2026-02-06T04:12:30.523+02:00  INFO 29336 --- [starwars-api] [webflux-http-nio-2] c.w.s.filter.RequestLoggingFilter        : POST http://localhost:50513/auth/logout -> 204 (12ms)
+2026-02-06T04:12:30.565+02:00  INFO 29336 --- [starwars-api] [main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.watech.starwars.controller.FavouriteControllerSliceTest]: FavouriteControllerSliceTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-02-06T04:12:30.627+02:00  INFO 29336 --- [starwars-api] [main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.watech.starwars.StarwarsApiApplication for test class com.watech.starwars.controller.FavouriteControllerSliceTest
+2026-02-06T04:12:30.671+02:00  INFO 29336 --- [starwars-api] [main] c.w.s.c.FavouriteControllerSliceTest     : Starting FavouriteControllerSliceTest using Java 21.0.10 with PID 29336 (started by lyly in C:\Users\lyly\Documents\starwars-api\starwars-api)
+2026-02-06T04:12:30.671+02:00  INFO 29336 --- [starwars-api] [main] c.w.s.c.FavouriteControllerSliceTest     : No active profile set, falling back to 1 default profile: "default"
+2026-02-06T04:12:31.031+02:00  INFO 29336 --- [starwars-api] [main] c.w.s.c.FavouriteControllerSliceTest     : Started FavouriteControllerSliceTest in 0.396 seconds (process running for 4.794)
+2026-02-06T04:12:31.158+02:00 ERROR 29336 --- [starwars-api] [parallel-1] o.s.w.s.adapter.HttpWebHandlerAdapter    : [3fd515a4] Error [java.lang.NullPointerException: Cannot invoke "org.springframework.http.HttpStatusCode.value()" because the return value of "org.springframework.http.server.reactive.ServerHttpResponse.getStatusCode()" is null] for HTTP GET "/favourites", but ServerHttpResponse already committed (null)
+2026-02-06T04:12:31.280+02:00  INFO 29336 --- [starwars-api] [SpringApplicationShutdownHook] o.s.boot.reactor.netty.GracefulShutdown  : Commencing graceful shutdown. Waiting for active requests to complete
+2026-02-06T04:12:31.286+02:00  INFO 29336 --- [starwars-api] [netty-shutdown] o.s.boot.reactor.netty.GracefulShutdown  : Graceful shutdown complete
+2026-02-06T04:13:29.555+02:00  INFO 20744 --- [starwars-api] [main] c.w.starwars.StarwarsApiApplication      : Starting StarwarsApiApplication using Java 21.0.10 with PID 20744 (C:\Users\lyly\Documents\starwars-api\starwars-api\target\classes started by lyly in C:\Users\lyly\Documents\starwars-api\starwars-api)
+2026-02-06T04:13:29.560+02:00  INFO 20744 --- [starwars-api] [main] c.w.starwars.StarwarsApiApplication      : No active profile set, falling back to 1 default profile: "default"
+2026-02-06T04:13:31.264+02:00  INFO 20744 --- [starwars-api] [main] o.s.boot.reactor.netty.NettyWebServer    : Netty started on port 8080 (http)
+2026-02-06T04:13:31.275+02:00  INFO 20744 --- [starwars-api] [main] c.w.starwars.StarwarsApiApplication      : Started StarwarsApiApplication in 2.157 seconds (process running for 2.907)
+2026-02-06T04:13:54.364+02:00  INFO 22896 --- [starwars-api] [main] c.w.starwars.AuthFlowIntegrationTest     : Starting AuthFlowIntegrationTest using Java 21.0.10 with PID 22896 (started by lyly in C:\Users\lyly\Documents\starwars-api\starwars-api)
+2026-02-06T04:13:54.367+02:00  INFO 22896 --- [starwars-api] [main] c.w.starwars.AuthFlowIntegrationTest     : No active profile set, falling back to 1 default profile: "default"
+2026-02-06T04:13:55.901+02:00  INFO 22896 --- [starwars-api] [main] o.s.boot.reactor.netty.NettyWebServer    : Netty started on port 51036 (http)
+2026-02-06T04:13:55.906+02:00  INFO 22896 --- [starwars-api] [main] c.w.starwars.AuthFlowIntegrationTest     : Started AuthFlowIntegrationTest in 1.835 seconds (process running for 3.341)
+2026-02-06T04:13:56.867+02:00  INFO 22896 --- [starwars-api] [webflux-http-nio-2] c.w.s.filter.RequestLoggingFilter        : POST http://localhost:51036/auth/login -> 200 (74ms)
+2026-02-06T04:13:56.896+02:00  INFO 22896 --- [starwars-api] [webflux-http-nio-2] c.w.s.filter.RequestLoggingFilter        : GET http://localhost:51036/favourites -> 200 (6ms)
+2026-02-06T04:13:56.912+02:00  INFO 22896 --- [starwars-api] [webflux-http-nio-2] c.w.s.filter.RequestLoggingFilter        : GET http://localhost:51036/favourites -> 200 (2ms)
+2026-02-06T04:13:56.918+02:00  INFO 22896 --- [starwars-api] [webflux-http-nio-2] c.w.s.filter.RequestLoggingFilter        : GET http://localhost:51036/favourites -> 200 (2ms)
+2026-02-06T04:13:56.933+02:00  INFO 22896 --- [starwars-api] [webflux-http-nio-2] c.w.s.filter.RequestLoggingFilter        : POST http://localhost:51036/auth/logout -> 204 (12ms)
+2026-02-06T04:13:56.972+02:00  INFO 22896 --- [starwars-api] [main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.watech.starwars.controller.FavouriteControllerSliceTest]: FavouriteControllerSliceTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-02-06T04:13:57.027+02:00  INFO 22896 --- [starwars-api] [main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.watech.starwars.StarwarsApiApplication for test class com.watech.starwars.controller.FavouriteControllerSliceTest
+2026-02-06T04:13:57.077+02:00  INFO 22896 --- [starwars-api] [main] c.w.s.c.FavouriteControllerSliceTest     : Starting FavouriteControllerSliceTest using Java 21.0.10 with PID 22896 (started by lyly in C:\Users\lyly\Documents\starwars-api\starwars-api)
+2026-02-06T04:13:57.078+02:00  INFO 22896 --- [starwars-api] [main] c.w.s.c.FavouriteControllerSliceTest     : No active profile set, falling back to 1 default profile: "default"
+2026-02-06T04:13:57.523+02:00  INFO 22896 --- [starwars-api] [main] c.w.s.c.FavouriteControllerSliceTest     : Started FavouriteControllerSliceTest in 0.483 seconds (process running for 4.958)
+2026-02-06T04:13:57.645+02:00 ERROR 22896 --- [starwars-api] [parallel-1] o.s.w.s.adapter.HttpWebHandlerAdapter    : [4812c550] Error [java.lang.NullPointerException: Cannot invoke "org.springframework.http.HttpStatusCode.value()" because the return value of "org.springframework.http.server.reactive.ServerHttpResponse.getStatusCode()" is null] for HTTP GET "/favourites", but ServerHttpResponse already committed (null)
+2026-02-06T04:13:57.848+02:00  INFO 22896 --- [starwars-api] [SpringApplicationShutdownHook] o.s.boot.reactor.netty.GracefulShutdown  : Commencing graceful shutdown. Waiting for active requests to complete
+2026-02-06T04:13:57.863+02:00  INFO 22896 --- [starwars-api] [netty-shutdown] o.s.boot.reactor.netty.GracefulShutdown  : Graceful shutdown complete
+2026-02-06T04:15:35.594+02:00  INFO 22024 --- [starwars-api] [main] c.w.s.c.FavouriteControllerSliceTest     : Starting FavouriteControllerSliceTest using Java 21.0.10 with PID 22024 (started by lyly in C:\Users\lyly\Documents\starwars-api\starwars-api)
+2026-02-06T04:15:35.598+02:00  INFO 22024 --- [starwars-api] [main] c.w.s.c.FavouriteControllerSliceTest     : No active profile set, falling back to 1 default profile: "default"
+2026-02-06T04:15:37.541+02:00  INFO 22024 --- [starwars-api] [main] c.w.s.c.FavouriteControllerSliceTest     : Started FavouriteControllerSliceTest in 2.356 seconds (process running for 3.546)
+2026-02-06T04:15:37.820+02:00 ERROR 22024 --- [starwars-api] [parallel-1] o.s.w.s.adapter.HttpWebHandlerAdapter    : [67420a34] Error [java.lang.NullPointerException: Cannot invoke "org.springframework.http.HttpStatusCode.value()" because the return value of "org.springframework.http.server.reactive.ServerHttpResponse.getStatusCode()" is null] for HTTP GET "/favourites", but ServerHttpResponse already committed (null)
+2026-02-06T04:22:41.029+02:00  INFO 28708 --- [starwars-api] [main] c.w.s.c.FavouriteControllerSliceTest     : Starting FavouriteControllerSliceTest using Java 21.0.10 with PID 28708 (started by lyly in C:\Users\lyly\Documents\starwars-api\starwars-api)
+2026-02-06T04:22:41.033+02:00  INFO 28708 --- [starwars-api] [main] c.w.s.c.FavouriteControllerSliceTest     : No active profile set, falling back to 1 default profile: "default"
+2026-02-06T04:22:42.860+02:00  INFO 28708 --- [starwars-api] [main] c.w.s.c.FavouriteControllerSliceTest     : Started FavouriteControllerSliceTest in 2.174 seconds (process running for 3.351)
+2026-02-06T04:22:43.088+02:00  INFO 28708 --- [starwars-api] [parallel-1] c.w.s.filter.RequestLoggingFilter        : GET /favourites -> 200 (65ms)
+2026-02-06T04:22:54.988+02:00  INFO 5720 --- [starwars-api] [main] c.w.starwars.AuthFlowIntegrationTest     : Starting AuthFlowIntegrationTest using Java 21.0.10 with PID 5720 (started by lyly in C:\Users\lyly\Documents\starwars-api\starwars-api)
+2026-02-06T04:22:54.990+02:00  INFO 5720 --- [starwars-api] [main] c.w.starwars.AuthFlowIntegrationTest     : No active profile set, falling back to 1 default profile: "default"
+2026-02-06T04:22:56.437+02:00  INFO 5720 --- [starwars-api] [main] o.s.boot.reactor.netty.NettyWebServer    : Netty started on port 57434 (http)
+2026-02-06T04:22:56.442+02:00  INFO 5720 --- [starwars-api] [main] c.w.starwars.AuthFlowIntegrationTest     : Started AuthFlowIntegrationTest in 1.749 seconds (process running for 3.407)
+2026-02-06T04:22:57.543+02:00  INFO 5720 --- [starwars-api] [webflux-http-nio-2] c.w.s.filter.RequestLoggingFilter        : POST http://localhost:57434/auth/login -> 200 (77ms)
+2026-02-06T04:22:57.574+02:00  INFO 5720 --- [starwars-api] [webflux-http-nio-2] c.w.s.filter.RequestLoggingFilter        : GET http://localhost:57434/favourites -> 200 (7ms)
+2026-02-06T04:22:57.591+02:00  INFO 5720 --- [starwars-api] [webflux-http-nio-2] c.w.s.filter.RequestLoggingFilter        : GET http://localhost:57434/favourites -> 200 (1ms)
+2026-02-06T04:22:57.595+02:00  INFO 5720 --- [starwars-api] [webflux-http-nio-2] c.w.s.filter.RequestLoggingFilter        : GET http://localhost:57434/favourites -> 200 (1ms)
+2026-02-06T04:22:57.607+02:00  INFO 5720 --- [starwars-api] [webflux-http-nio-2] c.w.s.filter.RequestLoggingFilter        : POST http://localhost:57434/auth/logout -> 204 (10ms)
+2026-02-06T04:22:57.642+02:00  INFO 5720 --- [starwars-api] [main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.watech.starwars.controller.FavouriteControllerSliceTest]: FavouriteControllerSliceTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-02-06T04:22:57.700+02:00  INFO 5720 --- [starwars-api] [main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.watech.starwars.StarwarsApiApplication for test class com.watech.starwars.controller.FavouriteControllerSliceTest
+2026-02-06T04:22:57.746+02:00  INFO 5720 --- [starwars-api] [main] c.w.s.c.FavouriteControllerSliceTest     : Starting FavouriteControllerSliceTest using Java 21.0.10 with PID 5720 (started by lyly in C:\Users\lyly\Documents\starwars-api\starwars-api)
+2026-02-06T04:22:57.747+02:00  INFO 5720 --- [starwars-api] [main] c.w.s.c.FavouriteControllerSliceTest     : No active profile set, falling back to 1 default profile: "default"
+2026-02-06T04:22:58.112+02:00  INFO 5720 --- [starwars-api] [main] c.w.s.c.FavouriteControllerSliceTest     : Started FavouriteControllerSliceTest in 0.405 seconds (process running for 5.078)
+2026-02-06T04:22:58.219+02:00  INFO 5720 --- [starwars-api] [parallel-1] c.w.s.filter.RequestLoggingFilter        : GET /favourites -> 200 (10ms)
+2026-02-06T04:22:58.296+02:00  INFO 5720 --- [starwars-api] [SpringApplicationShutdownHook] o.s.boot.reactor.netty.GracefulShutdown  : Commencing graceful shutdown. Waiting for active requests to complete
+2026-02-06T04:22:58.302+02:00  INFO 5720 --- [starwars-api] [netty-shutdown] o.s.boot.reactor.netty.GracefulShutdown  : Graceful shutdown complete
+2026-02-06T04:24:16.902+02:00  INFO 29616 --- [starwars-api] [main] c.w.starwars.AuthFlowIntegrationTest     : Starting AuthFlowIntegrationTest using Java 21.0.10 with PID 29616 (started by lyly in C:\Users\lyly\Documents\starwars-api\starwars-api)
+2026-02-06T04:24:16.904+02:00  INFO 29616 --- [starwars-api] [main] c.w.starwars.AuthFlowIntegrationTest     : No active profile set, falling back to 1 default profile: "default"
+2026-02-06T04:24:18.509+02:00  INFO 29616 --- [starwars-api] [main] o.s.boot.reactor.netty.NettyWebServer    : Netty started on port 54636 (http)
+2026-02-06T04:24:18.516+02:00  INFO 29616 --- [starwars-api] [main] c.w.starwars.AuthFlowIntegrationTest     : Started AuthFlowIntegrationTest in 1.907 seconds (process running for 3.2)
+2026-02-06T04:24:19.888+02:00  INFO 29616 --- [starwars-api] [webflux-http-nio-2] c.w.s.filter.RequestLoggingFilter        : POST http://localhost:54636/auth/login -> 200 (96ms)
+2026-02-06T04:24:19.921+02:00  INFO 29616 --- [starwars-api] [webflux-http-nio-2] c.w.s.filter.RequestLoggingFilter        : GET http://localhost:54636/favourites -> 200 (7ms)
+2026-02-06T04:24:19.935+02:00  INFO 29616 --- [starwars-api] [webflux-http-nio-2] c.w.s.filter.RequestLoggingFilter        : GET http://localhost:54636/favourites -> 200 (2ms)
+2026-02-06T04:24:19.940+02:00  INFO 29616 --- [starwars-api] [webflux-http-nio-2] c.w.s.filter.RequestLoggingFilter        : GET http://localhost:54636/favourites -> 200 (0ms)
+2026-02-06T04:24:19.953+02:00  INFO 29616 --- [starwars-api] [webflux-http-nio-2] c.w.s.filter.RequestLoggingFilter        : POST http://localhost:54636/auth/logout -> 204 (11ms)
+2026-02-06T04:24:19.987+02:00  INFO 29616 --- [starwars-api] [main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.watech.starwars.controller.FavouriteControllerSliceTest]: FavouriteControllerSliceTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-02-06T04:24:20.043+02:00  INFO 29616 --- [starwars-api] [main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.watech.starwars.StarwarsApiApplication for test class com.watech.starwars.controller.FavouriteControllerSliceTest
+2026-02-06T04:24:20.088+02:00  INFO 29616 --- [starwars-api] [main] c.w.s.c.FavouriteControllerSliceTest     : Starting FavouriteControllerSliceTest using Java 21.0.10 with PID 29616 (started by lyly in C:\Users\lyly\Documents\starwars-api\starwars-api)
+2026-02-06T04:24:20.088+02:00  INFO 29616 --- [starwars-api] [main] c.w.s.c.FavouriteControllerSliceTest     : No active profile set, falling back to 1 default profile: "default"
+2026-02-06T04:24:20.510+02:00  INFO 29616 --- [starwars-api] [main] c.w.s.c.FavouriteControllerSliceTest     : Started FavouriteControllerSliceTest in 0.465 seconds (process running for 5.197)
+2026-02-06T04:24:20.631+02:00  INFO 29616 --- [starwars-api] [parallel-1] c.w.s.filter.RequestLoggingFilter        : GET /favourites -> 200 (9ms)
+2026-02-06T04:24:20.729+02:00  INFO 29616 --- [starwars-api] [SpringApplicationShutdownHook] o.s.boot.reactor.netty.GracefulShutdown  : Commencing graceful shutdown. Waiting for active requests to complete
+2026-02-06T04:24:20.741+02:00  INFO 29616 --- [starwars-api] [netty-shutdown] o.s.boot.reactor.netty.GracefulShutdown  : Graceful shutdown complete
+2026-02-06T04:24:36.512+02:00  INFO 28440 --- [starwars-api] [main] c.w.starwars.AuthFlowIntegrationTest     : Starting AuthFlowIntegrationTest using Java 21.0.10 with PID 28440 (started by lyly in C:\Users\lyly\Documents\starwars-api\starwars-api)
+2026-02-06T04:24:36.513+02:00  INFO 28440 --- [starwars-api] [main] c.w.starwars.AuthFlowIntegrationTest     : No active profile set, falling back to 1 default profile: "default"
+2026-02-06T04:24:38.128+02:00  INFO 28440 --- [starwars-api] [main] o.s.boot.reactor.netty.NettyWebServer    : Netty started on port 54716 (http)
+2026-02-06T04:24:38.132+02:00  INFO 28440 --- [starwars-api] [main] c.w.starwars.AuthFlowIntegrationTest     : Started AuthFlowIntegrationTest in 1.911 seconds (process running for 3.14)
+2026-02-06T04:24:39.415+02:00  INFO 28440 --- [starwars-api] [webflux-http-nio-2] c.w.s.filter.RequestLoggingFilter        : POST http://localhost:54716/auth/login -> 200 (102ms)
+2026-02-06T04:24:39.443+02:00  INFO 28440 --- [starwars-api] [webflux-http-nio-2] c.w.s.filter.RequestLoggingFilter        : GET http://localhost:54716/favourites -> 200 (5ms)
+2026-02-06T04:24:39.460+02:00  INFO 28440 --- [starwars-api] [webflux-http-nio-2] c.w.s.filter.RequestLoggingFilter        : GET http://localhost:54716/favourites -> 200 (2ms)
+2026-02-06T04:24:39.466+02:00  INFO 28440 --- [starwars-api] [webflux-http-nio-2] c.w.s.filter.RequestLoggingFilter        : GET http://localhost:54716/favourites -> 200 (2ms)
+2026-02-06T04:24:39.478+02:00  INFO 28440 --- [starwars-api] [webflux-http-nio-2] c.w.s.filter.RequestLoggingFilter        : POST http://localhost:54716/auth/logout -> 204 (11ms)
+2026-02-06T04:24:39.512+02:00  INFO 28440 --- [starwars-api] [main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.watech.starwars.controller.FavouriteControllerSliceTest]: FavouriteControllerSliceTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-02-06T04:24:39.563+02:00  INFO 28440 --- [starwars-api] [main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.watech.starwars.StarwarsApiApplication for test class com.watech.starwars.controller.FavouriteControllerSliceTest
+2026-02-06T04:24:39.607+02:00  INFO 28440 --- [starwars-api] [main] c.w.s.c.FavouriteControllerSliceTest     : Starting FavouriteControllerSliceTest using Java 21.0.10 with PID 28440 (started by lyly in C:\Users\lyly\Documents\starwars-api\starwars-api)
+2026-02-06T04:24:39.607+02:00  INFO 28440 --- [starwars-api] [main] c.w.s.c.FavouriteControllerSliceTest     : No active profile set, falling back to 1 default profile: "default"
+2026-02-06T04:24:39.974+02:00  INFO 28440 --- [starwars-api] [main] c.w.s.c.FavouriteControllerSliceTest     : Started FavouriteControllerSliceTest in 0.402 seconds (process running for 4.981)
+2026-02-06T04:24:40.078+02:00  INFO 28440 --- [starwars-api] [parallel-1] c.w.s.filter.RequestLoggingFilter        : GET /favourites -> 200 (11ms)
+2026-02-06T04:24:40.172+02:00  INFO 28440 --- [starwars-api] [SpringApplicationShutdownHook] o.s.boot.reactor.netty.GracefulShutdown  : Commencing graceful shutdown. Waiting for active requests to complete
+2026-02-06T04:24:40.177+02:00  INFO 28440 --- [starwars-api] [netty-shutdown] o.s.boot.reactor.netty.GracefulShutdown  : Graceful shutdown complete
+2026-02-06T04:24:56.979+02:00  INFO 23376 --- [starwars-api] [main] c.w.starwars.StarwarsApiApplication      : Starting StarwarsApiApplication using Java 21.0.10 with PID 23376 (C:\Users\lyly\Documents\starwars-api\starwars-api\target\classes started by lyly in C:\Users\lyly\Documents\starwars-api\starwars-api)
+2026-02-06T04:24:56.982+02:00  INFO 23376 --- [starwars-api] [main] c.w.starwars.StarwarsApiApplication      : No active profile set, falling back to 1 default profile: "default"
+2026-02-06T04:24:58.146+02:00  INFO 23376 --- [starwars-api] [main] o.s.boot.reactor.netty.NettyWebServer    : Netty started on port 8080 (http)
+2026-02-06T04:24:58.162+02:00  INFO 23376 --- [starwars-api] [main] c.w.starwars.StarwarsApiApplication      : Started StarwarsApiApplication in 1.557 seconds (process running for 1.879)
+2026-02-06T04:25:24.978+02:00  INFO 23376 --- [starwars-api] [SpringApplicationShutdownHook] o.s.boot.reactor.netty.GracefulShutdown  : Commencing graceful shutdown. Waiting for active requests to complete
+2026-02-06T04:25:24.980+02:00  INFO 23376 --- [starwars-api] [netty-shutdown] o.s.boot.reactor.netty.GracefulShutdown  : Graceful shutdown complete
+2026-02-06T04:27:05.257+02:00  INFO 20532 --- [starwars-api] [main] c.w.starwars.AuthFlowIntegrationTest     : Starting AuthFlowIntegrationTest using Java 21.0.10 with PID 20532 (started by lyly in C:\Users\lyly\Documents\starwars-api\starwars-api)
+2026-02-06T04:27:05.259+02:00  INFO 20532 --- [starwars-api] [main] c.w.starwars.AuthFlowIntegrationTest     : No active profile set, falling back to 1 default profile: "default"
+2026-02-06T04:27:06.727+02:00  INFO 20532 --- [starwars-api] [main] o.s.boot.reactor.netty.NettyWebServer    : Netty started on port 56604 (http)
+2026-02-06T04:27:06.733+02:00  INFO 20532 --- [starwars-api] [main] c.w.starwars.AuthFlowIntegrationTest     : Started AuthFlowIntegrationTest in 1.779 seconds (process running for 3.263)
+2026-02-06T04:27:07.989+02:00  INFO 20532 --- [starwars-api] [webflux-http-nio-2] c.w.s.filter.RequestLoggingFilter        : POST http://localhost:56604/auth/login -> 200 (109ms)
+2026-02-06T04:27:08.027+02:00  INFO 20532 --- [starwars-api] [webflux-http-nio-2] c.w.s.filter.RequestLoggingFilter        : GET http://localhost:56604/favourites -> 200 (14ms)
+2026-02-06T04:27:08.040+02:00  INFO 20532 --- [starwars-api] [webflux-http-nio-2] c.w.s.filter.RequestLoggingFilter        : GET http://localhost:56604/favourites -> 200 (0ms)
+2026-02-06T04:27:08.046+02:00  INFO 20532 --- [starwars-api] [webflux-http-nio-2] c.w.s.filter.RequestLoggingFilter        : GET http://localhost:56604/favourites -> 200 (2ms)
+2026-02-06T04:27:08.059+02:00  INFO 20532 --- [starwars-api] [webflux-http-nio-2] c.w.s.filter.RequestLoggingFilter        : POST http://localhost:56604/auth/logout -> 204 (10ms)
+2026-02-06T04:27:08.094+02:00  INFO 20532 --- [starwars-api] [main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.watech.starwars.controller.FavouriteControllerSliceTest]: FavouriteControllerSliceTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-02-06T04:27:08.153+02:00  INFO 20532 --- [starwars-api] [main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.watech.starwars.StarwarsApiApplication for test class com.watech.starwars.controller.FavouriteControllerSliceTest
+2026-02-06T04:27:08.223+02:00  INFO 20532 --- [starwars-api] [main] c.w.s.c.FavouriteControllerSliceTest     : Starting FavouriteControllerSliceTest using Java 21.0.10 with PID 20532 (started by lyly in C:\Users\lyly\Documents\starwars-api\starwars-api)
+2026-02-06T04:27:08.225+02:00  INFO 20532 --- [starwars-api] [main] c.w.s.c.FavouriteControllerSliceTest     : No active profile set, falling back to 1 default profile: "default"
+2026-02-06T04:27:08.631+02:00  INFO 20532 --- [starwars-api] [main] c.w.s.c.FavouriteControllerSliceTest     : Started FavouriteControllerSliceTest in 0.461 seconds (process running for 5.161)
+2026-02-06T04:27:08.796+02:00  INFO 20532 --- [starwars-api] [parallel-1] c.w.s.filter.RequestLoggingFilter        : GET /favourites -> 200 (11ms)
+2026-02-06T04:27:08.953+02:00  INFO 20532 --- [starwars-api] [SpringApplicationShutdownHook] o.s.boot.reactor.netty.GracefulShutdown  : Commencing graceful shutdown. Waiting for active requests to complete
+2026-02-06T04:27:08.971+02:00  INFO 20532 --- [starwars-api] [netty-shutdown] o.s.boot.reactor.netty.GracefulShutdown  : Graceful shutdown complete
+2026-02-06T04:27:35.391+02:00  INFO 26652 --- [starwars-api] [main] c.w.starwars.AuthFlowIntegrationTest     : Starting AuthFlowIntegrationTest using Java 21.0.10 with PID 26652 (started by lyly in C:\Users\lyly\Documents\starwars-api\starwars-api)
+2026-02-06T04:27:35.394+02:00  INFO 26652 --- [starwars-api] [main] c.w.starwars.AuthFlowIntegrationTest     : No active profile set, falling back to 1 default profile: "default"
+2026-02-06T04:27:37.333+02:00  INFO 26652 --- [starwars-api] [main] o.s.boot.reactor.netty.NettyWebServer    : Netty started on port 54875 (http)
+2026-02-06T04:27:37.337+02:00  INFO 26652 --- [starwars-api] [main] c.w.starwars.AuthFlowIntegrationTest     : Started AuthFlowIntegrationTest in 2.378 seconds (process running for 4.349)
+2026-02-06T04:27:38.529+02:00  INFO 26652 --- [starwars-api] [webflux-http-nio-2] c.w.s.filter.RequestLoggingFilter        : POST http://localhost:54875/auth/login -> 200 (86ms)
+2026-02-06T04:27:38.559+02:00  INFO 26652 --- [starwars-api] [webflux-http-nio-2] c.w.s.filter.RequestLoggingFilter        : GET http://localhost:54875/favourites -> 200 (5ms)
+2026-02-06T04:27:38.574+02:00  INFO 26652 --- [starwars-api] [webflux-http-nio-2] c.w.s.filter.RequestLoggingFilter        : GET http://localhost:54875/favourites -> 200 (3ms)
+2026-02-06T04:27:38.580+02:00  INFO 26652 --- [starwars-api] [webflux-http-nio-2] c.w.s.filter.RequestLoggingFilter        : GET http://localhost:54875/favourites -> 200 (1ms)
+2026-02-06T04:27:38.597+02:00  INFO 26652 --- [starwars-api] [webflux-http-nio-2] c.w.s.filter.RequestLoggingFilter        : POST http://localhost:54875/auth/logout -> 204 (17ms)
+2026-02-06T04:27:38.631+02:00  INFO 26652 --- [starwars-api] [main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.watech.starwars.controller.FavouriteControllerSliceTest]: FavouriteControllerSliceTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-02-06T04:27:38.683+02:00  INFO 26652 --- [starwars-api] [main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.watech.starwars.StarwarsApiApplication for test class com.watech.starwars.controller.FavouriteControllerSliceTest
+2026-02-06T04:27:38.744+02:00  INFO 26652 --- [starwars-api] [main] c.w.s.c.FavouriteControllerSliceTest     : Starting FavouriteControllerSliceTest using Java 21.0.10 with PID 26652 (started by lyly in C:\Users\lyly\Documents\starwars-api\starwars-api)
+2026-02-06T04:27:38.744+02:00  INFO 26652 --- [starwars-api] [main] c.w.s.c.FavouriteControllerSliceTest     : No active profile set, falling back to 1 default profile: "default"
+2026-02-06T04:27:39.293+02:00  INFO 26652 --- [starwars-api] [main] c.w.s.c.FavouriteControllerSliceTest     : Started FavouriteControllerSliceTest in 0.599 seconds (process running for 6.305)
+2026-02-06T04:27:39.418+02:00  INFO 26652 --- [starwars-api] [parallel-1] c.w.s.filter.RequestLoggingFilter        : GET /favourites -> 200 (10ms)
+2026-02-06T04:27:39.508+02:00  INFO 26652 --- [starwars-api] [SpringApplicationShutdownHook] o.s.boot.reactor.netty.GracefulShutdown  : Commencing graceful shutdown. Waiting for active requests to complete
+2026-02-06T04:27:39.511+02:00  INFO 26652 --- [starwars-api] [netty-shutdown] o.s.boot.reactor.netty.GracefulShutdown  : Graceful shutdown complete
+2026-02-06T05:13:55.014+02:00  INFO 29052 --- [starwars-api] [main] c.w.starwars.AuthFlowIntegrationTest     : Starting AuthFlowIntegrationTest using Java 21.0.10 with PID 29052 (started by lyly in C:\Users\lyly\Documents\starwars-api\starwars-api)
+2026-02-06T05:13:55.016+02:00  INFO 29052 --- [starwars-api] [main] c.w.starwars.AuthFlowIntegrationTest     : No active profile set, falling back to 1 default profile: "default"
+2026-02-06T05:13:56.518+02:00  INFO 29052 --- [starwars-api] [main] o.s.boot.reactor.netty.NettyWebServer    : Netty started on port 62321 (http)
+2026-02-06T05:13:56.524+02:00  INFO 29052 --- [starwars-api] [main] c.w.starwars.AuthFlowIntegrationTest     : Started AuthFlowIntegrationTest in 1.798 seconds (process running for 3.294)
+2026-02-06T05:13:57.688+02:00  INFO 29052 --- [starwars-api] [webflux-http-nio-2] c.w.s.filter.RequestLoggingFilter        : POST http://localhost:62321/auth/login -> 200 (94ms)
+2026-02-06T05:13:57.721+02:00  INFO 29052 --- [starwars-api] [webflux-http-nio-2] c.w.s.filter.RequestLoggingFilter        : GET http://localhost:62321/favourites -> 200 (8ms)
+2026-02-06T05:13:57.762+02:00  INFO 29052 --- [starwars-api] [webflux-http-nio-2] c.w.s.filter.RequestLoggingFilter        : GET http://localhost:62321/favourites -> 200 (3ms)
+2026-02-06T05:13:57.774+02:00  INFO 29052 --- [starwars-api] [webflux-http-nio-2] c.w.s.filter.RequestLoggingFilter        : GET http://localhost:62321/favourites -> 200 (3ms)
+2026-02-06T05:13:57.797+02:00  INFO 29052 --- [starwars-api] [webflux-http-nio-2] c.w.s.filter.RequestLoggingFilter        : POST http://localhost:62321/auth/logout -> 204 (17ms)
+2026-02-06T05:13:57.847+02:00  INFO 29052 --- [starwars-api] [main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.watech.starwars.controller.FavouriteControllerSliceTest]: FavouriteControllerSliceTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-02-06T05:13:57.905+02:00  INFO 29052 --- [starwars-api] [main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.watech.starwars.StarwarsApiApplication for test class com.watech.starwars.controller.FavouriteControllerSliceTest
+2026-02-06T05:13:57.972+02:00  INFO 29052 --- [starwars-api] [main] c.w.s.c.FavouriteControllerSliceTest     : Starting FavouriteControllerSliceTest using Java 21.0.10 with PID 29052 (started by lyly in C:\Users\lyly\Documents\starwars-api\starwars-api)
+2026-02-06T05:13:57.972+02:00  INFO 29052 --- [starwars-api] [main] c.w.s.c.FavouriteControllerSliceTest     : No active profile set, falling back to 1 default profile: "default"
+2026-02-06T05:13:58.563+02:00  INFO 29052 --- [starwars-api] [main] c.w.s.c.FavouriteControllerSliceTest     : Started FavouriteControllerSliceTest in 0.646 seconds (process running for 5.335)
+2026-02-06T05:13:58.709+02:00  INFO 29052 --- [starwars-api] [parallel-1] c.w.s.filter.RequestLoggingFilter        : GET /favourites -> 200 (10ms)
+2026-02-06T05:13:58.802+02:00  INFO 29052 --- [starwars-api] [SpringApplicationShutdownHook] o.s.boot.reactor.netty.GracefulShutdown  : Commencing graceful shutdown. Waiting for active requests to complete
+2026-02-06T05:13:58.809+02:00  INFO 29052 --- [starwars-api] [netty-shutdown] o.s.boot.reactor.netty.GracefulShutdown  : Graceful shutdown complete
+2026-02-06T05:14:14.443+02:00  INFO 23944 --- [starwars-api] [main] c.w.starwars.StarwarsApiApplication      : Starting StarwarsApiApplication using Java 21.0.10 with PID 23944 (C:\Users\lyly\Documents\starwars-api\starwars-api\target\classes started by lyly in C:\Users\lyly\Documents\starwars-api\starwars-api)
+2026-02-06T05:14:14.446+02:00  INFO 23944 --- [starwars-api] [main] c.w.starwars.StarwarsApiApplication      : No active profile set, falling back to 1 default profile: "default"
+2026-02-06T05:14:15.608+02:00  INFO 23944 --- [starwars-api] [main] o.s.boot.reactor.netty.NettyWebServer    : Netty started on port 8080 (http)
+2026-02-06T05:14:15.623+02:00  INFO 23944 --- [starwars-api] [main] c.w.starwars.StarwarsApiApplication      : Started StarwarsApiApplication in 1.565 seconds (process running for 1.876)
+2026-02-06T05:14:21.906+02:00  INFO 23944 --- [starwars-api] [reactor-http-nio-2] c.w.s.filter.RequestLoggingFilter        : GET http://localhost:8080/people -> 200 (1200ms)
+2026-02-06T05:14:28.191+02:00  INFO 23944 --- [starwars-api] [reactor-http-nio-2] c.w.s.filter.RequestLoggingFilter        : GET http://localhost:8080/people/6 -> 200 (75ms)
+2026-02-06T05:15:57.779+02:00  INFO 23944 --- [starwars-api] [reactor-http-nio-3] c.w.s.filter.RequestLoggingFilter        : POST http://localhost:8080/auth/login -> 200 (26ms)
+2026-02-06T05:17:08.248+02:00  INFO 23944 --- [starwars-api] [reactor-http-nio-4] c.w.s.filter.RequestLoggingFilter        : GET http://localhost:8080/favourites -> 200 (2ms)
+2026-02-06T05:17:35.939+02:00  WARN 23944 --- [starwars-api] [reactor-http-nio-2] c.w.s.exception.GlobalExceptionHandler   : 400 GET http://localhost:8080/people/-5 - Character id must be 1 or greater
+2026-02-06T05:17:35.943+02:00  INFO 23944 --- [starwars-api] [reactor-http-nio-2] c.w.s.filter.RequestLoggingFilter        : GET http://localhost:8080/people/-5 -> 400 (14ms)
+2026-02-06T05:18:35.628+02:00  INFO 23944 --- [starwars-api] [SpringApplicationShutdownHook] o.s.boot.reactor.netty.GracefulShutdown  : Commencing graceful shutdown. Waiting for active requests to complete
+2026-02-06T05:18:35.631+02:00  INFO 23944 --- [starwars-api] [netty-shutdown] o.s.boot.reactor.netty.GracefulShutdown  : Graceful shutdown complete

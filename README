@@ -1,0 +1,45 @@
+# Quickstart:
+There is a provided maven wrapper if needed
+```bash
+    -To run the app:
+        mvn spring-boot:run
+
+    -To run tests:
+        Run all tests: mvn test
+        Run each test class: mvn test -Dtest=AuthFlowIntegrationTest
+                             mvn test -Dtest=FavouriteControllerSliceTest
+```
+# Prereq:
+-Java 21+
+
+# Design:
+-I chose WebFlux instead of MVC risking overkill but it's a good showcase of modern reactive non-blocking backend design. The trade-off is slightly higher complexity due to Mono<> requiring reactive programming.
+    -Even though swapi doesn't take long to respond, non-blocking architecture showcases modern design.
+
+-Auth is implemented with simple, minimal tokens without Spring Security to showcase some token-based auth understanding. Trade-offs: not production-ready, no persistence
+
+-Caching is manually implemented using Caffeine which is extremely fast in-memory local cache and avoids any reduntant calls. Each cache map is injected via configurable beans. This showcases scalable implementation design. The tradeof is that it's bound locally to one instance of JVM so for distributed systems distributed cache is needed, also no persistence for restart or complex cases when errors need to actually be cached
+
+-All errors from SWAPI are mapped to domain exceptions that are handeled globally via @RestControllerAdvice
+
+-Requests are logged using a dedicated WebFilter and errors are logged cenrally in GlobalExceptionHandler.java
+
+# Authentication Flow:
+1. user logs in:
+    -/auth/login generates accessToken and refreshToken and stores them in memory and returns them in a response to the consumer
+
+2. User accesses protected endpoint:
+    -Request must include header "Authorization: Bearer <accessToken>"
+    -Optionally if refresh try is wanted also include header "Refresh-Token: <refreshToken>"
+    -If token is valid request proceeds normally 
+
+3. If access token is invalid (old):
+    -Filter attempts one automatic refresh using refresh token from Refresh-Token header
+    -if refresh succeeds a new access token is generated and sent back in the response header "New-Access-Token: <newToken>
+        -original request is "replayed". For this assignment the request header isn't mutated with the new token.
+    -if refresh fails 401 Unauthorized is returned
+
+4. Logout:
+    -/auth/logout removes session data from memory and tokens become invalid
+
+### I greatly enjoyed working on this assignment as it provided a good opportunity to refresh my modern backend knowlege in design, modern spring and reactive backends with Spring WebFlux.
